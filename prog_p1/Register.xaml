@@ -4,27 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+       xmlns:local="clr-namespace:prog_p1.Helpers"
         mc:Ignorable="d"
         Title="Register" Height="450" Width="380"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
          MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="theme/WatermarkStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     
-
-
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Border CornerRadius="10" Grid.RowSpan="2">
-                <Border.Background>
-                    <LinearGradientBrush>
-                        <GradientStop Color="#7be9f6" Offset="0.0"/>
-                        <GradientStop Color="#f083da" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
+            <Border CornerRadius="10" Grid.RowSpan="2" Background="#272537">
+               
             </Border>
             <StackPanel VerticalAlignment="Center">
                 <Image Source="Images\Logo.png" Width="90"/>
@@ -42,7 +45,9 @@
                     <TextBox x:Name="usernameTextBox"
                         FontFamily="helvetica"
                          FontWeight="Light"
-                         Text="username"
+                        local:WaterMarkTextHelper.IsMonitoring="True"
+                        local:WaterMarkTextHelper.WatermarkText="Username"
+                        Style="{StaticResource WaterMarkTextBox}"
                          FontSize="20"
                          HorizontalAlignment="Center"
                          Foreground="White"
@@ -69,7 +74,10 @@
                     <PasswordBox x:Name="passwordBox"
                         FontFamily="helvetica"
                          FontWeight="Light"
-                         Password="Password"
+                         local:WaterMarkTextHelper.IsMonitoring="True"
+                         local:WaterMarkTextHelper.WatermarkText="password"
+                         Style="{StaticResource WaterMarkPasswordBox}"
+                         Password=""
                          FontSize="20"
                          HorizontalAlignment="Center"
                          Foreground="White"

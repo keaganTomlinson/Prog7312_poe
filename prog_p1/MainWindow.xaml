@@ -1,23 +1,33 @@
 ﻿<Window x:Class="prog_p1.MainWindow"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:prog_p1.Helpers"
+
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="380"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="theme/WatermarkStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
-
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Border CornerRadius="10" Grid.RowSpan="2" Background="#272537">
-            </Border>
+            <Border CornerRadius="10" Grid.RowSpan="2" Background="#272537"></Border>
             <StackPanel VerticalAlignment="Center">
                 <Image Source="Images\Logo.png" Width="90"/>
                 <TextBlock Text="DeweyQuest"
@@ -27,45 +37,40 @@
                            Foreground ="White"
                            HorizontalAlignment="Center"/>
             </StackPanel>
-
             <StackPanel Grid.Row="1" >
-
-
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="usernameTextBox"
-                        FontFamily="helvetica"
-                         FontWeight="Light"
-                         Text="username"
-                         FontSize="20"
-                         HorizontalAlignment="Center"
-                         Foreground="White"
-                         Background="Transparent"
-                         BorderThickness="0"
-                         Width="235"
-                         HorizontalContentAlignment="Left"
-                         Opacity="0.5"
-                         Height="25"
-                             Margin="63,0,0,0"
-                         />
-                    <iconPacks:PackIconMaterial Kind="Account"
+                                      local:WaterMarkTextHelper.IsMonitoring="True"
+                                      local:WaterMarkTextHelper.WatermarkText="Username"
+                                       Style="{StaticResource WaterMarkTextBox}"
+                                        FontFamily="helvetica"
+                                         FontWeight="Light"
+                                         FontSize="20"
+                                         HorizontalAlignment="Center"
+                                         Foreground="White"
+                                         Background="Transparent"
+                                         BorderThickness="0"
+                                         Width="235"
+                                         HorizontalContentAlignment="Left"
+                                         Opacity="0.5"
+                                         Height="25"
+                                         Margin="63,0,0,0"/>
+                        <iconPacks:PackIconMaterial Kind="Account"
                                             VerticalAlignment="Center" 
                                             HorizontalAlignment="Center"
                                             Foreground="White"/>
-
                 </StackPanel>
-
                 <Border Width="250"
                     Height="2"
                     Opacity="0.5"/>
-
-
-
-
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                     <PasswordBox  x:Name="passwordBox"
                                   FontFamily="helvetica"
+                                   local:WaterMarkTextHelper.IsMonitoring="True"
+                                      local:WaterMarkTextHelper.WatermarkText="password"
+                                       Style="{StaticResource WaterMarkPasswordBox}"
                          FontWeight="Light"
-                         Password="Password"
+                         Password=""
                          FontSize="20"
                          HorizontalAlignment="Center"
                          Foreground="White"
@@ -81,20 +86,14 @@
                                             VerticalAlignment="Center" 
                                             HorizontalAlignment="Center"
                                             Foreground="White"/>
-
                 </StackPanel>
-
                 <Border Width="250"
                     Height="2"
                     Opacity="0.5"/>
             </StackPanel>
-
             <Button Width="100" Height="30" Content="Login" Margin="19,131,261,64" Grid.Row="1" Click="LoginButton_Click"/>
             <Button Width="100" Height="30" Content="Exit" Margin="258,131,22,64" Grid.Row="1" Click="ExitButton_Click"/>
             <Button Width="100" Height="30" Content="Register" Margin="140,131,140,64" Grid.Row="1" Click="RegisterButton_Click"/>
-
         </Grid>
     </Grid>
-
-
 </Window>
