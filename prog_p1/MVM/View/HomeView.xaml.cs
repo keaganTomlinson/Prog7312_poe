@@ -24,5 +24,7 @@ namespace prog_p1.MVM.View
         {
             InitializeComponent();
         }
+
+       
     }
 }

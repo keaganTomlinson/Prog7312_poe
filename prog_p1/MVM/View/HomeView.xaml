@@ -7,38 +7,134 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
-        <TextBlock Text="Discover"
+        <TextBlock Text="Dewey Decimal System Training"
                    Foreground="White"
                    FontSize="28"
-                   HorizontalAlignment="left"
+                   HorizontalAlignment="Left"
                    Margin="0,0,0,20"/>
+
         <StackPanel Orientation="Horizontal">
             <Border Width="400"
-                    Height="200">
+                    Height="200"
+                    CornerRadius="10">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                           <GradientStop Color="#5bc3ff" Offset="0.0"/>
-                             <GradientStop Color="#3aa0ff" Offset="1"/>
+                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                        <GradientStop Color="#3aa0ff" Offset="1"/>
                     </LinearGradientBrush>
-                  
                 </Border.Background>
-                <Border.Clip>
-                    <RectangleGeometry RadiusX="10"
-                                       RadiusY="10"
-                                       Rect="0,0,400,200"/>
-                    
-                </Border.Clip>
-
                 <Grid>
                     <StackPanel>
-                        <TextBlock Text="World Leader"
+                        <TextBlock Text="Explore the Dewey Decimal System"
                                    Foreground="White"
-                                   FontSize="28"
-                                   Margin=" 20,10,10,0"/>
-                        
+                                   FontSize="20"
+                                   Margin="20,10,10,0"/>
+                        <TextBlock Text="Learn to organize information effectively in a library"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="20,0,10,10"/>
                     </StackPanel>
                 </Grid>
-                
+            </Border>
+
+            <Border Width="400"
+                    Height="200"
+                    CornerRadius="10">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                        <GradientStop Color="#3aa0ff" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Additional Information Section"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="20,10,10,0"/>
+                        <TextBlock Text="Add more information here..."
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="20,0,10,10"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <TextBlock Text="How to play"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,20,0,10"/>
+
+        <StackPanel Orientation="Horizontal">
+            <Border Width="400"
+                    Height="200"
+                    CornerRadius="10">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                        <GradientStop Color="#3aa0ff" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="How to Play Section - Replace Books"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="20,10,10,0"/>
+                        <TextBlock Text="Add instructions for replacing books here..."
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="20,0,10,10"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border Width="400"
+                    Height="200"
+                    CornerRadius="10">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                        <GradientStop Color="#3aa0ff" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="How to Play Section - Identify Areas"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="20,10,10,0"/>
+                        <TextBlock Text="Add instructions for identifying areas here..."
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="20,0,10,10"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border Width="400"
+                    Height="200"
+                    CornerRadius="10">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                        <GradientStop Color="#3aa0ff" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="How to Play Section - Find Call Numbers"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="20,10,10,0"/>
+                        <TextBlock Text="Add instructions for finding call numbers here..."
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="20,0,10,10"/>
+                    </StackPanel>
+                </Grid>
             </Border>
         </StackPanel>
     </StackPanel>
