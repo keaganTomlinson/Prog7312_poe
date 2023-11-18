@@ -25,7 +25,11 @@
             <DataTemplate DataType="{x:Type viewModel:ReplacingbookViewModel}">
                 <view:ReplacingbookView/>
             </DataTemplate>
-            
+
+            <DataTemplate DataType="{x:Type viewModel:MatchTheColumnsViewModel}">
+                <view:MatchTheColumnsView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -67,7 +67,9 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding MTCViewCommand}"/>
+                
                 
                 <RadioButton Content="Finding call numbers"
                              Height="50"

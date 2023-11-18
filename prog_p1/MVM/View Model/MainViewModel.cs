@@ -15,6 +15,8 @@ namespace prog_p1.MVM.View_Mode_
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand LeaderViewCommand { get; set; }
         public RelayCommand ReplaceViewCommand { get; set; }
+        public RelayCommand MTCViewCommand { get; set; }
+
         public RelayCommand ExitCommand { get; }
 
 
@@ -23,6 +25,7 @@ namespace prog_p1.MVM.View_Mode_
         public HomeViewModel HomeVM { get; set; }
         public ReplacingbookViewModel RPBMV { get; set; }
         public LeaderBoardViewModel LeaderVm { get; set; }
+        public MatchTheColumnsViewModel MTCVM { get; set; }
 
         private object _curentView;
 
@@ -39,6 +42,7 @@ namespace prog_p1.MVM.View_Mode_
             HomeVM = new HomeViewModel();
             LeaderVm = new LeaderBoardViewModel();
             RPBMV = new ReplacingbookViewModel();
+            MTCVM = new MatchTheColumnsViewModel();
             CurentView = HomeVM;
 
             HomeViewCommand = new RelayCommand(o =>
@@ -59,6 +63,11 @@ namespace prog_p1.MVM.View_Mode_
             ReplaceViewCommand = new RelayCommand(o =>
             {
                 CurentView = RPBMV;
+            });
+
+            MTCViewCommand = new RelayCommand(o =>
+            {
+                CurentView = MTCVM;
             });
 
         }
