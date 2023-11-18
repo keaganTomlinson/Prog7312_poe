@@ -21,7 +21,11 @@
             <DataTemplate DataType="{x:Type viewModel:LeaderBoardViewModel}">
                 <view:LeaderBoard/>
             </DataTemplate>
-
+            
+            <DataTemplate DataType="{x:Type viewModel:ReplacingbookViewModel}">
+                <view:ReplacingbookView/>
+            </DataTemplate>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

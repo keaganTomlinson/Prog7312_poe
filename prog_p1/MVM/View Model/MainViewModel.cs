@@ -14,12 +14,14 @@ namespace prog_p1.MVM.View_Mode_
 
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand LeaderViewCommand { get; set; }
+        public RelayCommand ReplaceViewCommand { get; set; }
         public RelayCommand ExitCommand { get; }
 
 
 
 
         public HomeViewModel HomeVM { get; set; }
+        public ReplacingbookViewModel RPBMV { get; set; }
         public LeaderBoardViewModel LeaderVm { get; set; }
 
         private object _curentView;
@@ -36,7 +38,7 @@ namespace prog_p1.MVM.View_Mode_
         {
             HomeVM = new HomeViewModel();
             LeaderVm = new LeaderBoardViewModel();
-
+            RPBMV = new ReplacingbookViewModel();
             CurentView = HomeVM;
 
             HomeViewCommand = new RelayCommand(o =>
@@ -54,6 +56,10 @@ namespace prog_p1.MVM.View_Mode_
                 Environment.Exit(0); // Exit the application
             });
 
+            ReplaceViewCommand = new RelayCommand(o =>
+            {
+                CurentView = RPBMV;
+            });
 
         }
     }

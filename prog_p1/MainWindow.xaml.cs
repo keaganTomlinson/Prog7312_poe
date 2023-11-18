@@ -122,6 +122,8 @@ namespace prog_p1
         }
         private void OpenDashBoard(string userId)
         {
+            Application.Current.Properties["UserID"] = userId;
+
             New_DashBoard dashBoardWindow = new New_DashBoard();
             dashBoardWindow.Show();
             this.Close(); // Close the current window if needed

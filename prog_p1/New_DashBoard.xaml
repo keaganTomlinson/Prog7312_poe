@@ -60,7 +60,8 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding ReplaceViewCommand}"/>
                 
                 <RadioButton Content="Match the Columns"
                              Height="50"

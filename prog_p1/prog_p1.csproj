@@ -87,19 +87,21 @@
     </ApplicationDefinition>
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="Data\HighScoreData.cs" />
     <Compile Include="Helpers\WaterMarkTextHelper.cs" />
     <Compile Include="MatchTheColumnsQuestion.cs" />
-    <Compile Include="DashBoard.xaml.cs">
-      <DependentUpon>DashBoard.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MVM\View Model\HomeViewModel.cs" />
     <Compile Include="MVM\View Model\LeaderBoardViewModel.cs" />
     <Compile Include="MVM\View Model\MainViewModel.cs" />
+    <Compile Include="MVM\View Model\ReplacingbookViewModel.cs" />
     <Compile Include="MVM\View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVM\View\LeaderBoard.xaml.cs">
       <DependentUpon>LeaderBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVM\View\ReplacingbookView.xaml.cs">
+      <DependentUpon>ReplacingbookView.xaml</DependentUpon>
     </Compile>
     <Compile Include="New_DashBoard.xaml.cs">
       <DependentUpon>New_DashBoard.xaml</DependentUpon>
@@ -107,10 +109,6 @@
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
-    <Page Include="DashBoard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -132,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MVM\View\LeaderBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVM\View\ReplacingbookView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
