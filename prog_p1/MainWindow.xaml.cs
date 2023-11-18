@@ -62,7 +62,8 @@ namespace prog_p1
                                 MessageBox.Show("Login Successful!");
 
                                 // Open the dashboard and pass the user ID
-                                OpenDashBoard(userId.ToString());
+                               OpenDashBoard(userId.ToString());
+
                             }
                             else
                             {
@@ -82,7 +83,13 @@ namespace prog_p1
             }
         }
 
-
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
@@ -115,7 +122,7 @@ namespace prog_p1
         }
         private void OpenDashBoard(string userId)
         {
-            DashBoard dashBoardWindow = new DashBoard(userId);
+            New_DashBoard dashBoardWindow = new New_DashBoard();
             dashBoardWindow.Show();
             this.Close(); // Close the current window if needed
         }
