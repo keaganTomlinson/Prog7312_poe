@@ -34,9 +34,9 @@
 
         <!-- Buttons and Scoreboard -->
         <StackPanel Grid.Column="2" HorizontalAlignment="Center" Margin="10">
+            <Button Name="Start" Foreground="White" Background="DarkGreen" Click="Start_Click" Content="Start" Margin="0,0,0,5"/>
             <Button Name="refreshButton" Foreground="White" Background="DarkBlue" Click="RefreshButton_Click" Content="Refresh" Margin="0,0,0,5"/>
             <Button Name="checkAnswerButton" Foreground="White" Background="DarkGreen" Content="Check Answer" Margin="0,0,0,5"/>
-
             <Border BorderBrush="White" BorderThickness="1">
                 <TextBlock Name="scoreTextBlock" Foreground="White" Width="150" HorizontalAlignment="Right" Text="Score: 0" Padding="5"/>
             </Border>

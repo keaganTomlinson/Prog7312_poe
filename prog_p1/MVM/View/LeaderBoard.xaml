@@ -27,6 +27,8 @@
                         <!-- Column for matched score -->
                         <GridViewColumn Header="Matched Score" Width="120" DisplayMemberBinding="{Binding MatchedScore}" />
 
+                        <!-- Column for quiz score -->
+                        <GridViewColumn Header="quiz score" Width="120" DisplayMemberBinding="{Binding quizscore}" />
                     </GridView>
                 </ListView.View>
             </ListView>

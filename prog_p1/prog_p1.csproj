@@ -87,14 +87,19 @@
     </ApplicationDefinition>
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="Data\DeweyTreeBuilder.cs" />
     <Compile Include="Data\HighScoreData.cs" />
     <Compile Include="Helpers\WaterMarkTextHelper.cs" />
     <Compile Include="MatchTheColumnsQuestion.cs" />
+    <Compile Include="MVM\View Model\FindingCallNumbersViewModel.cs" />
     <Compile Include="MVM\View Model\HomeViewModel.cs" />
     <Compile Include="MVM\View Model\LeaderBoardViewModel.cs" />
     <Compile Include="MVM\View Model\MainViewModel.cs" />
     <Compile Include="MVM\View Model\MatchTheColumnsViewModel.cs" />
     <Compile Include="MVM\View Model\ReplacingbookViewModel.cs" />
+    <Compile Include="MVM\View\FindingCallNumbersView.xaml.cs">
+      <DependentUpon>FindingCallNumbersView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVM\View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
@@ -126,6 +131,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ModernButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVM\View\FindingCallNumbersView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -194,6 +203,9 @@
     <Folder Include="Images\" />
     <Folder Include="MVM\Model\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\DeweyData.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

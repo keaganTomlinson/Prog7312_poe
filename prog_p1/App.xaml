@@ -30,6 +30,10 @@
                 <view:MatchTheColumnsView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:FindingCallNumbersViewModel}">
+                <view:FindingCallNumbersView/>
+            </DataTemplate>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

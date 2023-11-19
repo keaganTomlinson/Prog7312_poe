@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="prog_p1.MVM.View.FindingCallNumbersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:prog_p1.MVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <!-- TreeView for Dewey Decimal system -->
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553,10,0,0" Width="247" Height="413">
+            <Label Content="Rules:" Foreground="White" FontWeight="Bold"/>
+            <TextBlock Foreground="White" TextWrapping="Wrap">
+        Put your rules here. Rule 1: ...
+        Rule 2: ...
+        Rule 3: ...
+            </TextBlock>
+            <Button x:Name="startButton" Content="Start Quiz" Foreground="White" Click="startButton_Click"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,21,0,0" Width="500" Height="200" RenderTransformOrigin="0.502,0.57">
+            <TextBlock x:Name="timerDisplay" FontSize="20" Foreground="White" Text="Time: 00:00" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label x:Name="scoreLabel" FontSize="20" Content="Score: 0" Foreground="White" FontWeight="Bold" Width="250" HorizontalAlignment="Center"/>
+                <Label x:Name="incorectLabel" FontSize="20" Content="Incorrect: 0" Foreground="White" FontWeight="Bold" Width="250" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <ProgressBar x:Name="progressBar" Width="400" Height="30" Value="0" Maximum="100" Margin="0,20,20,0"/>
+        </StackPanel>
+
+        <!-- Quiz UI -->
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,186,0,0" Width="500" Height="224">
+            <Label Content="Quiz Question:" Foreground="White" FontWeight="Bold" FontSize="28"/>
+            <Label x:Name="questionLabel" Foreground="White" FontSize="20" Content="What is the category for Philosophy and psychology?"/>
+            <Button x:Name="optionButton1" Content="Option 1"  FontSize="20" Foreground="White" Click="OptionButton_Click"/>
+            <Button x:Name="optionButton2" Content="Option 2"  FontSize="20" Foreground="White" Click="OptionButton_Click"/>
+            <Button x:Name="optionButton3" Content="Option 3"  FontSize="20" Foreground="White" Click="OptionButton_Click"/>
+            <Button x:Name="optionButton4" Content="Option 4" FontSize="20"  Foreground="White" Click="OptionButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

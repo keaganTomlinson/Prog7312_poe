@@ -44,7 +44,7 @@ namespace prog_p1.MVM.View
                 {
                     connection.Open();
 
-                    string query = "SELECT U.Username, H.ScoreTime, H.matched_score FROM Users U INNER JOIN HighScores H ON U.UserID = H.UserID ORDER BY ScoreTime DESC;";
+                    string query = "SELECT U.Username, H.ScoreTime, H.matched_score ,H.quiz_score FROM Users U INNER JOIN HighScores H ON U.UserID = H.UserID ORDER BY ScoreTime DESC;";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -59,11 +59,15 @@ namespace prog_p1.MVM.View
                                 int scoreTime = scoreTimeNullable ?? 0; // Default value is 0 if scoreTimeNullable is null
                                 int matchedScore = matchedScoreNullable ?? 0; // Default value is 0 if matchedScoreNullable is null
 
+                                int? quizScoreNullable = reader.IsDBNull(3) ? (int?)null : reader.GetInt32(3);
+                                int quizScore = quizScoreNullable ?? 0; // Default value is 0 if quizScoreNullable is null
+
                                 HighScoreData highScoreData = new HighScoreData
                                 {
                                     Username = username,
                                     ScoreTime = scoreTime,
-                                    MatchedScore = matchedScore
+                                    MatchedScore = matchedScore,
+                                    quizscore = quizScore // Set the value of quiz_score
                                 };
 
                                 highScores.Add(highScoreData);  // Corrected variable name
